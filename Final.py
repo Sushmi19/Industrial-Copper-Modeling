@@ -17,7 +17,7 @@ def predict_status(ctry,itmtp,aplcn,wth,prdrf,qtlg,cstlg,tknslg,slgplg,itmdt,itm
     dydm= int(deldtmn)
     dydy= int(deldtyr)
     #modelfile of the classification
-    with open("K:/Industrial Copper Modeling/Industrial_Copper_Modeling-main/Classification_model.pkl","rb") as f:
+    with open("K:\guvi project\prj 5- Industrial Copper Modeling\Industrial_Copper_Modeling-main\Classification_model.pkl","rb") as f:
         model_class=pickle.load(f)
 
     user_data= np.array([[ctry,itmtp,aplcn,wth,prdrf,qtlg,cstlg,tknslg,
@@ -42,7 +42,7 @@ def predict_selling_price(ctry,sts,itmtp,aplcn,wth,prdrf,qtlg,cstlg,
     dydm= int(deldtmn)
     dydy= int(deldtyr)
     #modelfile of the classification
-    with open("K:/Industrial Copper Modeling/Industrial_Copper_Modeling-main/Regression_Model.pkl","rb") as f:
+    with open("K:\guvi project\prj 5- Industrial Copper Modeling\Industrial_Copper_Modeling-main\Regression_Model.pkl","rb") as f:
         model_regg=pickle.load(f)
 
     user_data= np.array([[ctry,sts,itmtp,aplcn,wth,prdrf,qtlg,cstlg,tknslg,
@@ -60,7 +60,7 @@ st.set_page_config(layout= "wide")
 st.title(":blue[**INDUSTRIAL COPPER MODELING**]")
 
 with st.sidebar:
-    option = option_menu('Haaris', options=["PREDICT SELLING PRICE", "PREDICT STATUS"])
+    option = option_menu('Home', options=["PREDICT SELLING PRICE", "PREDICT STATUS"])
 
 if option == "PREDICT STATUS":
 
